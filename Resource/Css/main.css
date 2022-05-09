@@ -106,9 +106,12 @@ footer {
     box-shadow: 0 -5px 10px black;
     padding: 5px;
     letter-spacing: .1rem;
+    z-index: 100;
 }
 
 .hero img {
+    position:absolute;
+    bottom: 0;
     width: 100%;
 }
 

@@ -1,3 +1,3 @@
 const notReady = () => {
-    alert("Sorry I have nothing to show yet. Please stop back later for updates")
+    alert("Currently under construction, come check out a little later.")
 }
