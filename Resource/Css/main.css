@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Macondo', cursive;
+    ;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-right: auto;
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100;
+    min-width: 375px;
+    padding: 1rem 1rem;
+    background-color: black;
+    box-shadow: 0 5px 10px 5px black;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:2rem;
+    width: 100%;
+    height: 3rem;
+    background-color: rgb(0, 0, 0);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-width: 375px;
+    margin: 0 auto;
+    background-color: gray;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navitem {
+    margin: 0 .5rem;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('/Resource/images/profile.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+}
+
+.self {
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 -5px 10px black;
+}
+
+.hero img {
+    display: none;
+}
+
+.skills{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:.5rem;
+    margin-top: 1rem;
+    padding:0 10px;
+    width: 100%;
+    min-width: 375px;
+}
+
+.card {
+    width: 60%;
+    margin: 0 auto;
+    padding: 14px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+.card .contIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.card .contIcon img{
+    width: 100px;
+}
+
+.borderOrange {
+    border-top: 3px solid orangered;
+}
+
+.borderGreen {
+    border-top: 3px solid greenyellow;
+}
+
+.borderBlue {
+    border-top: 3px solid aqua;
+}
+
+.borderYellow {
+    border-top: 3px solid yellow;
+}
+
+
+
+@media only screen and (min-width:800px) {
+    header{
+        width:95%;
+        margin: 0 auto;
+    }
+    .container {
+        width: 75%;
+    }
+
+
+    .hero {
+        all: unset;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+        margin-top: 1rem;
+    }
+
+    .hero img {
+        display: inline;
+        width: auto;
+        max-height: 350px;
+        box-shadow: 0 5px 10px 5px black;
+        margin: 1rem 1rem;
+    }
+
+    .self {
+        display: inline;
+        width: unset;
+        background-color: unset;
+        text-align: unset;
+        font-size: 1.5rem;
+        margin-left: 30px;
+        box-shadow: unset;
+        color: rgb(0,0,0);
+    }
+
+
+    .name {
+        position: relative;
+        margin-left: -25px;
+        font-size: 1.7rem;
+        color: rgb(0,0,0);
+    }
+
+    .skills {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 15px 0;
+        background-color: transparent;
+    }
+
+    .card {
+        width:350px;
+    }
+}
