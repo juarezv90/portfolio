@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;400;500;700&display=swap');
 
+:root {
+    --eerie-black: hsla(0, 0%, 13%, 1);
+    --carolina-blue: hsla(200, 98%, 48%, 1);
+    --gray-x-11-gray: hsla(0, 0%, 72%, 1);
+    --green-blue-crayola: hsla(202, 91%, 41%, 1);
+    --cafe-au-lait: hsla(20, 31%, 56%, 1);
+}
+
 html {
     box-sizing: border-box;
     margin: 0;
@@ -28,7 +36,7 @@ li {
 
 body {
     display: inline;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: var(--eerie-black);
 }
 
 header {
@@ -54,7 +62,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top:2rem;
+    margin-top: 2rem;
     width: 100%;
     height: 3rem;
     background-color: rgb(0, 0, 0);
@@ -66,7 +74,8 @@ footer {
     min-width: 375px;
     max-width: 475px;
     margin: 0 auto;
-    background-color: gray;
+    background-color: var(--green-blue-crayola);
+    box-shadow: 3px -1px 10px rgba(0, 0, 0, 1), -3px -1px 10px rgba(0, 0, 0, 1) ;
 }
 
 .navbar {
@@ -79,6 +88,21 @@ footer {
     margin: 0 .5rem;
 }
 
+.but-contact {
+    padding: 4px .5rem;
+    border-radius: 10px;
+    background-color: var(--green-blue-crayola);
+    letter-spacing: 1.5px;
+}
+
+.but-contact a {
+    color: rgb(0, 0, 0);
+}
+
+.but-contact:hover {
+    opacity: .8;
+}
+
 .hero {
     position: relative;
     display: flex;
@@ -88,13 +112,16 @@ footer {
     width: 100%;
     height: 600px;
     overflow: hidden;
+    
 }
+
 .hero .name {
-    position:relative;
+    position: relative;
     font-size: 1.5rem;
     margin-right: auto;
     padding-bottom: 5px;
 }
+
 .self {
     color: white;
     width: 100%;
@@ -110,20 +137,20 @@ footer {
 }
 
 .hero img {
-    position:absolute;
-    bottom: 0;
+    position: absolute;
+    top:0;
     width: 100%;
 }
 
-.skills{
+.skills {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:.5rem;
+    gap: .5rem;
     margin-top: 1rem;
-    padding:0 10px;
+    padding: 0 10px;
     width: 100%;
     min-width: 375px;
 }
@@ -133,10 +160,10 @@ footer {
     margin: 0 auto;
     padding: 14px;
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 10px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, .9);
     letter-spacing: .1rem;
 }
 
@@ -148,7 +175,7 @@ footer {
     margin-right: 8px;
 }
 
-.card .contIcon img{
+.card .contIcon img {
     width: 100px;
 }
 
@@ -171,13 +198,15 @@ footer {
 
 
 @media (min-width:800px) {
-    header{
-        width:95%;
+    header {
+        width: 95%;
         margin: 0 auto;
     }
+
     .container {
         width: 75%;
-        max-width: unset;
+        min-width: 800px;
+        max-width: 1366px;
     }
 
 
@@ -205,12 +234,13 @@ footer {
         position: relative;
         display: inline;
         width: unset;
+        max-width: 400px;
         background-color: unset;
         text-align: unset;
         font-size: 1.5rem;
         margin-left: 30px;
         box-shadow: unset;
-        color: rgb(0,0,0);
+        color: rgb(0, 0, 0);
     }
 
 
@@ -218,17 +248,17 @@ footer {
         position: relative;
         margin-left: -25px;
         font-size: 1.7rem;
-        color: rgb(0,0,0);
+        color: rgb(0, 0, 0);
     }
 
     .skills {
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 15px 0;
+        padding: 15px 8px;
         background-color: transparent;
     }
 
     .card {
-        width:350px;
+        width: 300px;
     }
 }
