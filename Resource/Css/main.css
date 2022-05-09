@@ -5,7 +5,6 @@ html {
     margin: 0;
     padding: 0;
     font-size: 16px;
-
 }
 
 * {
@@ -14,7 +13,6 @@ html {
     padding: 0;
     color: white;
     font-family: 'Macondo', cursive;
-    ;
 }
 
 h1 {
@@ -29,6 +27,7 @@ li {
 }
 
 body {
+    display: inline;
     background-color: rgba(0, 0, 0, .8);
 }
 
@@ -37,12 +36,12 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 100;
+    width: 100%;
     min-width: 375px;
     padding: 1rem 1rem;
     background-color: black;
     box-shadow: 0 5px 10px 5px black;
-    z-index: 999;
+    z-index: 10;
 }
 
 nav {
@@ -96,8 +95,6 @@ footer {
     padding-bottom: 5px;
 }
 .self {
-    position: absolute;
-    bottom:0;
     color: white;
     width: 100%;
     text-align: center;
@@ -127,7 +124,7 @@ footer {
 }
 
 .card {
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
     padding: 14px;
     display: flex;
