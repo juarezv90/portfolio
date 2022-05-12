@@ -60,11 +60,11 @@ nav {
 
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-top: 2rem;
     width: 100%;
-    height: 3rem;
+    height: 100px;
     background-color: rgb(0, 0, 0);
 }
 
@@ -72,7 +72,6 @@ footer {
     position: relative;
     width: 100%;
     min-width: 375px;
-    max-width: 475px;
     margin: 0 auto;
     background-color: var(--green-blue-crayola);
     box-shadow: 3px -1px 10px rgba(0, 0, 0, 1), -3px -1px 10px rgba(0, 0, 0, 1) ;
@@ -141,6 +140,8 @@ footer {
     position: absolute;
     top:0;
     width: 100%;
+    height: 600px;
+    object-fit: cover;
 }
 
 .skills {
@@ -197,7 +198,14 @@ footer {
     border-top: 3px solid yellow;
 }
 
+.i-container {
+    display: flex;
+}
 
+.icons {
+    width: 50px;
+    height: auto;
+}
 
 @media (min-width:800px) {
     header {
@@ -266,4 +274,9 @@ footer {
     .card {
         width: 300px;
     }
+
+    footer {
+        flex-direction: column;
+    }
+
 }
