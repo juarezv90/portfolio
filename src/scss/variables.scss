@@ -1,0 +1,34 @@
+$text: #e6fdf9;
+$background: #010e0c;
+$primary: #73f2db;
+$secondary: #0e339a;
+$accent: #4b3ded;
+
+@mixin sm {
+  @media (max-width: 640px) {
+    grid-column: unset;
+    grid-row: unset;
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 641px) and (max-width: 1280px) {
+    grid-column: unset;
+    grid-row: unset;
+    @content;
+  }
+}
+
+@mixin divSetup {
+  border: 1px solid white;
+  padding: 0.5rem;
+  transition: 200ms ease-in-out;
+
+  &:hover {
+  }
+
+  @include sm {
+    border: unset;
+  }
+}

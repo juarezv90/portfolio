@@ -1,0 +1,65 @@
+@use "./variables.scss" as *;
+
+.portfolio {
+  border-radius: 10px;
+  grid-column: 1 / span 4;
+  grid-row: 2 / span 5;
+  @include divSetup;
+
+  h3 {
+    border-bottom: 1px solid $accent;
+  }
+
+  .project_item {
+    display: grid;
+    width: 100%;
+
+    h4 {
+      display: flex;
+      flex-direction: column;
+      text-transform: uppercase;
+      padding: 0;
+    }
+
+    .pub {
+      font-size: 0.85rem;
+      color: gray;
+    }
+
+    .image_text {
+      display: flex;
+      width: 100%;
+      padding: 0 1rem;
+      gap: 1rem;
+
+      img {
+        width: 100px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
+
+      p {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        a {
+          font-weight: 700;
+        }
+
+        a:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  @include sm {
+    grid-row: 4;
+  }
+
+  @include md {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+}

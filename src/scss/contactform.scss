@@ -1,0 +1,51 @@
+@use "./variables.scss" as *;
+
+div.contactform {
+  border-radius: 10px;
+  grid-row: 5/span 1;
+  grid-column: 5 / span 4;
+  height: fit-content;
+  min-height: 100%;
+  @include divSetup;
+
+
+  form {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap:1rem;
+
+    p {
+        display: grid;
+        grid-template-columns: 10ch 1fr;
+        label {
+          font-size: 20px;
+        }
+        input,textarea {
+            padding: 8px;
+            border-radius: 10px;
+            margin-top: .5rem;
+        }
+        textarea {
+          grid-column: 2;
+          grid-row: 3;
+        }
+    }
+
+    button {
+        padding: .75rem;
+        margin: 1rem auto;
+        grid-column: 2;
+    }
+  }
+
+  @include sm {
+    gap: 1rem;
+    grid-column: 1;
+    grid-row: 8/ span 1;
+  }
+
+  @include md{
+    grid-row: 6/ span 2;
+  }
+}

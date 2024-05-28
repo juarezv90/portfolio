@@ -1,0 +1,19 @@
+@use './variables.scss' as *;
+
+div.location {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    grid-column: 11/ span 2;
+    grid-row: 1;
+    @include divSetup;
+
+
+    @include sm {
+
+    }
+
+    @include md {
+        grid-row: 5;
+    }
+}

@@ -1,0 +1,18 @@
+@use './variables.scss' as *;
+
+div.skills {
+    border-radius: 10px;
+    grid-row: 3/ span 1;
+    grid-column: 9/span 4;
+    @include divSetup;
+
+
+    @include sm {
+    }
+
+
+    @include md {
+        grid-column: 1/ span 2;
+        grid-row: 4;
+    }
+}
