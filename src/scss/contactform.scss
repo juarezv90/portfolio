@@ -8,6 +8,10 @@ div.contactform {
   min-height: 100%;
   @include divSetup;
 
+  @media (min-height: 1400px) {
+    grid-row: 4/span 2;
+  }
+
 
   form {
     display: flex;
