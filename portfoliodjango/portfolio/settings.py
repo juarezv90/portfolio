@@ -25,7 +25,18 @@ SECRET_KEY = 'django-insecure-7i8m30)51#*og-_4+h7xjbb=&)c1k(#xh$eyy==bzf7r9lq47^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['portfolioapi.victorjuarez.dev','victorjuarez.dev', 'localhost:3000', '127.0.0.1:3000']
+#White listing react port 3000
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'https://portfolioapi.victorjuarez.dev',
+    'https://victorjuarez.dev',
+]
+
+
+CSRF_TRUSTED_ORIGINS = ['https://*.victorjuarez.dev','https://*.127.0.0.1','https://victorjuarez.dev', 'http://localhost:3000']
+
 
 # Application definition
 
@@ -102,13 +113,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-#White listing react port 3000
-CORS_ALLOWED_ORIGIN = (
-    'http://localhost:3000',
-    'https://127.0.0.1:3000',
-)
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/

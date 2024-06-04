@@ -14,13 +14,13 @@ function App() {
         <Location />
         <BlogIntroPage />
         <Skills />
-        <img src="/JUAREZ.svg" alt="logo" className="logo" />
+        <img src="/portfolio_images/JUAREZ.svg" alt="logo" className="logo" />
         <div className="socials">
           Socials:
           <div className="socialIcons">
-            <img src="/twitter.svg" alt="twitter icon" />
-            <img src="/overflow.svg" alt="overflow icon" />
-            <img src="/github.svg" alt="github icon"  />
+            <img src="/portfolio_images/twitter.svg" alt="twitter icon" />
+            <img src="/portfolio_images/overflow.svg" alt="overflow icon" />
+            <img src="/portfolio_images/github.svg" alt="github icon"  />
           </div>
         </div>
         <PortfolioSection />
