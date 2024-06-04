@@ -8,7 +8,7 @@ export const PortfolioSection = () => {
   useEffect(() => {
 
     const loader = async () => {
-      const response = await fetch('https://portfolioapi.victorjuarez.dev/project-list')
+      const response = await fetch('/project-list')
       const projects = await response.json()
       setItems(projects)
     }

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-7i8m30)51#*og-_4+h7xjbb=&)c1k(#xh$eyy==bzf7r9lq47^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfolioapi.victorjuarez.dev','victorjuarez.dev', 'localhost:3000', '127.0.0.1:3000']
+ALLOWED_HOSTS = ['portfolioapi.victorjuarez.dev','victorjuarez.dev', 'localhost:3000', '127.0.0.1:3000', '127.0.0.1']
 #White listing react port 3000
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
