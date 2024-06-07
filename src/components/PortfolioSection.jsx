@@ -8,7 +8,7 @@ export const PortfolioSection = () => {
   useEffect(() => {
 
     const loader = async () => {
-      const response = await fetch('/project-list')
+      const response = await fetch('https://portfolioapi.victorjuarez.dev/project-list')
       const projects = await response.json()
       setItems(projects)
     }
@@ -21,7 +21,7 @@ export const PortfolioSection = () => {
     <section className="portfolio">
       <h3>Portfolio</h3>
       {items && items.map((item, key) => (
-        <ProjectItem props={item} key={`${item}${key}`}/>
+        <ProjectItem props={item} key={`${item}+${key}`}/>
       ))}
     </section>
   );
