@@ -61,7 +61,7 @@ function ContactForm() {
           <button type="submit">Full Send</button>
         </p>
         {responded.status >= 200 && responded.status < 300 && <p className="success">Email Sent</p>}
-        {responded.status < 200 || responded.status >= 300 && <p className="failed">Error Sending</p>}
+        {responded.status < 200 || responded.status >= 300 && <p className="failed">Error Sending : {responded.message}</p>}
       </form>
     </div>
   );

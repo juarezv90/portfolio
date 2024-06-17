@@ -19,8 +19,12 @@ function App() {
           Socials:
           <div className="socialIcons">
             <img src="/portfolio_images/twitter.svg" alt="twitter icon" />
-            <img src="/portfolio_images/overflow.svg" alt="overflow icon" />
-            <img src="/portfolio_images/github.svg" alt="github icon"  />
+            <a href="https://stackoverflow.com/users/3363002/juarezdev" target="_blank" rel="noopener noreferrer">
+              <img src="/portfolio_images/overflow.svg" alt="overflow icon" />
+            </a>
+            <a href="https://github.com/juarezv90" target="_blank" rel="noopener noreferrer">
+              <img src="/portfolio_images/github.svg" alt="github icon" />
+            </a>
           </div>
         </div>
         <PortfolioSection />
