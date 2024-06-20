@@ -1,0 +1,18 @@
+/* SCSS RGB */
+$alabaster: rgba(224, 226, 219, 1);
+$timberwolf: rgba(210, 212, 200, 1);
+$ash-gray: rgba(184, 189, 181, 1);
+$cadet-gray: rgba(136, 150, 150, 1);
+$hookers-green: rgba(95, 116, 112, 1);
+
+@mixin mdscrn {
+  @media (min-width: 40rem) and (max-width: 64rem) {
+    @content;
+  }
+}
+
+@mixin lgscrn{
+  @media (min-width:64rem) {
+    @content;
+  }
+}

@@ -1,0 +1,72 @@
+@import "./variables";
+
+section.contactSection {
+    max-width: 1280px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-top: 3rem;
+    gap: 1rem;
+    
+    .location {
+        padding: 2rem;
+        color: $alabaster;
+        background-color: darken($hookers-green, 30%);
+        border-radius: 2rem;
+    }
+
+    @include mdscrn {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include lgscrn {
+        grid-template-columns: 1fr 1fr;
+        .locationContainer {
+            font-size: 1.5rem;
+        }
+    }
+
+    .locationContainer {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        border-radius: 2rem;
+        place-items: center;       
+    }
+
+    .contactform {
+        background-color: $hookers-green;
+        padding: 1rem;
+        border-radius: 2rem;
+
+        form {
+            text-align: center;
+            & * {
+                width: 100%;
+                margin-bottom: 4px;
+                padding: .5rem;
+                border-radius: .5rem;
+                border: none;
+            }
+
+            button {
+                border: none;
+                width: 50%;
+                margin-bottom: 0;
+                color: $hookers-green;
+                background-color: lighten($ash-gray, 20%);
+                font-weight: 700;
+                padding: 1rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: lighten($ash-gray, 40%);
+                }
+            }
+        }
+    }
+}

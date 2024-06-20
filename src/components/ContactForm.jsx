@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import "../scss/contactform.scss";
+import Location from "../assets/Location"
+import "../scss/contact.scss";
 
 function ContactForm() {
 
   const [message, setMessage] = useState({ name: "", message: "", email: "" })
-  const [responded, setResponded] = useState({ status:0, message: "" })
+  const [responded, setResponded] = useState({ status: 0, message: "" })
 
 
   const handleChange = (e) => {
@@ -25,45 +26,51 @@ function ContactForm() {
         status: status,
         message: data.success
       })
-    } 
+    }
 
     send()
 
     setTimeout(() => {
-      setResponded({status:0, message:""})
+      setResponded({ status: 0, message: "" })
     }, 2000);
-    
+
   }
 
 
   return (
-    <div className="contactform">
-      <h3>Contact Me:</h3>
-      <form onSubmit={handleSubmit}>
-        <p>
-          <input type="text" name="name" id="name" required onChange={handleChange} value={message.name} placeholder="Name" />
-        </p>
-        <p>
-          <input type="email" name="email" id="email" required onChange={handleChange} value={message.email} placeholder="Email" />
-        </p>
-        <p>
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="4"
-            required
-            onChange={handleChange}
-            value={message.message}
-            placeholder="Let's discuss an opportunity"></textarea>
-        </p>
-        <p>
-          <button type="submit">Full Send</button>
-        </p>
-        {responded.status >= 200 && responded.status < 300 && <p className="success">Email Sent</p>}
-        {responded.status < 200 || responded.status >= 300 && <p className="failed">Error Sending : {responded.message}</p>}
-      </form>
-    </div>
+    <section className="contactSection" id="contact">
+
+      <Location />
+
+      <div className="contactform">
+        <h3>Contact Me:</h3>
+        <form onSubmit={handleSubmit}>
+          <p>
+            <input type="text" name="name" id="name" required onChange={handleChange} value={message.name} placeholder="Name" />
+          </p>
+          <p>
+            <input type="email" name="email" id="email" required onChange={handleChange} value={message.email} placeholder="Email" />
+          </p>
+          <p>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="4"
+              required
+              onChange={handleChange}
+              value={message.message}
+              placeholder="Let's discuss an opportunity"></textarea>
+          </p>
+          <p>
+            <button type="submit">Full Send</button>
+          </p>
+          {responded.status >= 200 && responded.status < 300 && <p className="success">Email Sent</p>}
+          {responded.status < 200 || responded.status >= 300 && <p className="failed">Error Sending : {responded.message}</p>}
+        </form>
+      </div>
+
+    </section>
   );
 }
 

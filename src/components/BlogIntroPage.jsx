@@ -1,5 +1,5 @@
 import React from 'react'
-import "../scss/blogmainpage.scss"
+// import "../scss/blogmainpage.scss"
 
 function BlogIntroPage() {
   return (

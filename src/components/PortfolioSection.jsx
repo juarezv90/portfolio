@@ -1,6 +1,6 @@
-import "../scss/portfolio.scss";
 import ProjectItem from "../assets/ProjectItem";
 import { useEffect, useState } from "react";
+import "../scss/portfolio.scss";
 
 export const PortfolioSection = () => {
   const [items, setItems] = useState([])
@@ -18,11 +18,13 @@ export const PortfolioSection = () => {
   }, [])
 
   return (
-    <section className="portfolio">
-      <h3>Portfolio</h3>
-      {items && items.map((item, key) => (
-        <ProjectItem props={item} key={`${item}+${key}`}/>
-      ))}
+    <section className="portfolio" id="portfolio">
+      <h2>Portfolio</h2>
+      <div className="projectGrid">
+        {items && items.map((item, key) => (
+          <ProjectItem props={item} key={`${item}+${key}`} />
+        ))}
+      </div>
     </section>
   );
 };

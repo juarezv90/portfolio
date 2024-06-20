@@ -1,89 +1,101 @@
-@use "./variables.scss" as *;
+@import './variables.scss';
 
 header {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  padding: 1rem;
-  grid-column: 1 / span 10;
-  grid-row: 1;
-  justify-content: space-around;
-  @include divSetup;
+    position: relative;
+    background-color: $hookers-green;
+    height: calc(1rem *8);
+    padding: 1rem;
+    color: lighten($timberwolf, 20%);
+    transition: 300ms ease-in;
+    box-shadow: 0 1rem 10px 10px $hookers-green;
 
-  .headshot {
-    background-image: url("/portfolio_images/headshot.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-
-  .headerText {
-    margin-top: 2rem;
-  }
-
-  @include sm {
-    display: inline;
-    height: 200px;
-
-    .headshot {
-      width: 100%;
-      height: 100%;
-      background-position: center left;
-      background-size: 175px;
+    @include lgscrn {
+        height: calc(1rem * 6.5);
     }
 
-    .headerText {
-      margin-left: auto;
-      margin-top: 2rem;
-      max-width: 25ch;
-      h1 {
-        font-size: 1.5rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-    }
-  }
-
-
-  @include md {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    gap: 0;
-    padding: 0;
-    overflow: hidden;
-
-    .headshot {
-      position: relative;
-      display: inline;
-      background-position: center left;
-      background-size: cover;
-
-      @media (max-width: 840px) {
-        height: 100%;
-      }
+    .headerContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1280px;
+        margin: 0 auto;
     }
 
-    .headerText {
-      margin: unset;
-      align-self: center;
+    .header_text p {
+        width: 25ch;
 
-      h1 {
-        font-size: 3.25rem;
-      }
-      p {
-        margin-left: 1rem;
-      }
+        @include mdscrn {
+            width: 40ch;
+            word-break: break-all;
+        }
+
+        @include lgscrn {
+            width: auto;
+        }
     }
-  }
+
+    nav.mdlg {
+        display: none;
+
+        ul {
+            display: flex;
+            gap: 1rem;
+            font-size: 1.10rem;
+
+            a,
+            a:focus {
+                color: lighten($timberwolf, 20%);
+            }
+        }
+
+        @include mdscrn {
+            display: unset;
+        }
+
+        @include lgscrn {
+            display: unset;
+        }
+    }
+
+
+
+
+    nav.nav_mobile {
+        position: relative;
+        color: $hookers-green;
+        z-index: 100;
+
+        @include mdscrn {
+            display: none;
+        }
+
+        @include lgscrn {
+            display: none;
+        }
+
+        img {
+            cursor: pointer;
+
+        }
+
+        .mobile_nav_list {
+            position: absolute;
+            top: calc(1rem + 48px);
+            right: -1rem;
+            overflow: hidden;
+            transition: 500ms ease-in-out;
+
+            li {
+                padding: 1rem;
+                text-align: right;
+                width: 15ch;
+                background-color: white;
+
+                &:hover,
+                &:focus {
+                    border-bottom: 1px solid $hookers-green;
+                }
+            }
+        }
+    }
 }
