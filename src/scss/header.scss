@@ -3,34 +3,42 @@
 header {
     position: relative;
     background-color: $hookers-green;
-    height: calc(1rem *8);
     padding: 1rem;
     color: lighten($timberwolf, 20%);
     transition: 300ms ease-in;
     box-shadow: 0 1rem 10px 10px $hookers-green;
 
     @include lgscrn {
-        height: calc(1rem * 6.5);
+        // height: calc(1rem * 6.5);
+        #mobileLogo{
+            display: none;
+        }
+    }
+
+    @include mdscrn {
+        #mobileLogo {
+            display: none;
+        }
     }
 
     .headerContainer {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: end;
         max-width: 1280px;
         margin: 0 auto;
-    }
 
-    .header_text p {
-        width: 25ch;
-
-        @include mdscrn {
-            width: 40ch;
-            word-break: break-all;
+        #mobileLogo {
+            margin: 0 auto;
         }
 
+        @include mdscrn {
+            align-items: center;
+
+        }
         @include lgscrn {
-            width: auto;
+            align-items: center;
         }
     }
 
@@ -41,6 +49,7 @@ header {
             display: flex;
             gap: 1rem;
             font-size: 1.10rem;
+            align-items: end;
 
             a,
             a:focus {
@@ -80,7 +89,7 @@ header {
 
         .mobile_nav_list {
             position: absolute;
-            top: calc(1rem + 48px);
+            top: calc(1rem + 2rem);
             right: -1rem;
             overflow: hidden;
             transition: 500ms ease-in-out;
@@ -88,12 +97,16 @@ header {
             li {
                 padding: 1rem;
                 text-align: right;
-                width: 15ch;
+                width: 10rem;
                 background-color: white;
 
                 &:hover,
                 &:focus {
                     border-bottom: 1px solid $hookers-green;
+                }
+
+                a, a:hover, a:focus {
+                    color: $hookers-green;
                 }
             }
         }

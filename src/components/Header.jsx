@@ -34,16 +34,21 @@ function Header() {
   }, [page])
 
   return (
-    <header style={page > 96 ? {position:"fixed", zIndex:1000, width:"100%", height:"3rem"}: {position:"relative"}}>
-      <div className="headerContainer" >
-        <div className="header_text">
+    <header style={page > 96 ? { position: "fixed", zIndex: 1000, width: "100%", height: "3rem"} : { position: "relative" }}>
+      <div className="headerContainer" style={page > 96 ? {flexDirection:'row', justifyContent:"center"}:{}}>
+        {/* <div className="header_text">
           <h1>Juarez Development</h1>
           <p style={page >96 ? {display:'none'}:{display:"unset"}}>Elevate Every Pixel: Full-Stack Solutions for Stunning Websites</p>
-        </div>
+        </div> */}
+         <img src="./portfolio_images/logo.svg" alt="" srcset="" id="mobileLogo" width={160} style={page > 96 ? {height:'3rem'}: {}}/>
+      
         <nav className="mdlg">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li>
+              <img src="./portfolio_images/logo.svg" alt="" srcset="" width={175} style={page > 96 ? {height:"2rem"}: {height:"100%"}}/>
+            </li>
             <li><a href="#portfolio">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
