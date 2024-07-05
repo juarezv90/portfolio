@@ -1,27 +1,18 @@
-@import "./variables";
+@use './variables.scss' as *;
 
-.skillContainer {
-    height: auto;
-    padding-top: 3rem;
-    
-    .skillBox{
-        padding: 3rem 1rem;
-        max-width: 1280px;
-        margin: 0 auto;
+div.skills {
+    border-radius: 10px;
+    grid-row: 3/ span 1;
+    grid-column: 9/span 4;
+    @include divSetup;
+
+
+    @include sm {
     }
 
-    .iconContainer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        justify-content: center;
-        gap: 1rem;
-        margin: 2rem 0;
-    }
 
-    .skillText {
-        max-width: 600px;
-        margin: auto;
-        text-align: center;
+    @include md {
+        grid-column: 1/ span 2;
+        grid-row: 4;
     }
 }
